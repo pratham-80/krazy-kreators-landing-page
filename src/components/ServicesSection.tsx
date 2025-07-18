@@ -65,7 +65,7 @@ const ServicesSection: React.FC = () => {
 
           {/* Services Grid - Connected Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <motion.div
                 key={service.id}
                 variants={cardVariants}

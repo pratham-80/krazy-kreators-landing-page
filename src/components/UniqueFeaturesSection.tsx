@@ -47,7 +47,7 @@ const container = {
 
 const card = {
   hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeInOut" } },
+  show: { opacity: 1, y: 0 },
 };
 
 const UniqueFeaturesSection: React.FC = () => (
@@ -64,7 +64,11 @@ const UniqueFeaturesSection: React.FC = () => (
         viewport={{ once: true, margin: "-100px" }}
       >
         {features.map((feature) => (
-          <motion.div key={feature.title} variants={card}>
+          <motion.div 
+            key={feature.title} 
+            variants={card}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <Card className="bg-[#FAFAFA] rounded-2xl shadow-md hover:shadow-lg p-6 border border-transparent hover:border-[#CBB49A] transition-all duration-300">
               <div className="flex items-center justify-start">
                 <span className="bg-[#CBB49A]/20 p-3 rounded-full flex items-center justify-center">

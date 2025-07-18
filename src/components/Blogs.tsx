@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, User, ChevronDown, Clock } from 'lucide-react';
+import { Calendar, ChevronDown, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface BlogPost {

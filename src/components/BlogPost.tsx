@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Calendar, Clock, User, Share2, ArrowLeft, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BlogPost: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, -50]);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <div className="min-h-screen bg-white">

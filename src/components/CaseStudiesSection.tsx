@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const caseStudies = [
   {
@@ -55,15 +55,6 @@ const caseStudies = [
 ];
 
 const CaseStudiesSection: React.FC = () => {
-  const { scrollYProgress } = useScroll();
-
-  // Function to determine if a card should be faded based on scroll position
-  const getCardOpacity = (cardIndex: number) => {
-    return {
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeInOut" }
-    };
-  };
 
   return (
     <section className="relative bg-white py-20 overflow-hidden">

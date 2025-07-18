@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
             <div>
               <p className="text-sm text-[#A0A0A0] mb-4">Follow us</p>
               <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
