@@ -4,15 +4,13 @@ import { Volume2, VolumeX } from 'lucide-react';
 
 const VideoSection: React.FC = () => {
   const [isMuted, setIsMuted] = useState(false); // Start with audio enabled
-  const [isVisible, setIsVisible] = useState(false);
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-        
         if (entry.isIntersecting) {
           // Section is visible - play video
           if (videoRef.current) {

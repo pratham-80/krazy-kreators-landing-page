@@ -158,7 +158,7 @@ const Navbar: React.FC = () => {
                           <div className="space-y-3">
                             {item.dropdown.map((dropdownItem, dropdownIndex) => {
                               // Define images for each dropdown item
-                              const getImageUrl = (label: string, parentLabel: string) => {
+                              const getImageUrl = (label: string) => {
                                 const imageMap: { [key: string]: string } = {
                                   // Solutions
                                   'Services': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=120&fit=crop&crop=center',
@@ -193,7 +193,7 @@ const Navbar: React.FC = () => {
                                   {/* Background Image */}
                                   <div 
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
-                                    style={{ backgroundImage: `url(${getImageUrl(dropdownItem.label, item.label)})` }}
+                                    style={{ backgroundImage: `url(${getImageUrl(dropdownItem.label)})` }}
                                   />
                                   
                                   {/* Dark overlay for text readability */}
